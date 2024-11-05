@@ -53,27 +53,6 @@ JOIN
 WHERE
 	r.fim_reserva IS NOT NULL;
 
-(Saber os hospedes que ainda estão com as suas reservas ativas)
-SELECT 
-	r.id_reserva,
-	q.id_quarto,
-	h.nome AS hospede,
-	h.telefone,
-	h.idade,
-	q.nome AS quarto,
-	q.preco,
-	r.data_reserva,
-	r.inicio_reserva,
-	r.fim_reserva
-FROM
-	reservas r
-JOIN
-	hospedes h ON r.id_hospede = h.id_hospede
-JOIN
-	quartos q ON r.id_quarto = q.id_quarto
-WHERE
-	r.fim_reserva IS NULL;
-
 (Ver todos os hospedes que habitam em cada quarto, contando com os que já saíram e os ainda ativos)    
 SELECT 
 	r.id_reserva,
@@ -93,7 +72,7 @@ JOIN
 JOIN
 	quartos q ON r.id_quarto = q.id_quarto;
 
-(Mostrar todos os quartos que ainda não foram reservados )
+(Mostrar todos os quartos que ainda não foram reservados)
 SELECT 
 	r.id_reserva,
 	q.id_quarto,

@@ -22,6 +22,7 @@ CREATE TABLE reservas (
     fim_reserva VARCHAR(10) NOT NULL,
     id_quarto INT NOT NULL,
     id_hospede INT NOT NULL,
+    status BOOLEAN NOT NULL,
     CONSTRAINT fk_hospede FOREIGN KEY (id_hospede) REFERENCES hospedes(id_hospede),
     CONSTRAINT fk_quarto FOREIGN KEY (id_quarto) REFERENCES quartos(id_quarto)
 );

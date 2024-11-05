@@ -6,13 +6,13 @@ CREATE TABLE hospedes (
     id_hospede SERIAL PRIMARY KEY,
     nome VARCHAR(40) NOT NULL,
     idade INT NOT NULL,
-    telefone VARCHAR(20) NOT NULL UNIQUE,
+    telefone VARCHAR(20) NOT NULL UNIQUE
 );
 
 CREATE TABLE quartos (
     id_quarto SERIAL PRIMARY KEY,
     nome VARCHAR(40) NOT NULL,
-    preco DECIMAL(5,2) NOT NULL,
+    preco DECIMAL(5,2) NOT NULL
 );
 
 CREATE TABLE reservas (

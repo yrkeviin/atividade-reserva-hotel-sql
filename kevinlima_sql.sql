@@ -12,7 +12,7 @@ CREATE TABLE hospedes (
 CREATE TABLE quartos (
     id_quarto SERIAL PRIMARY KEY,
     nome VARCHAR(40) NOT NULL,
-    preco DECIMAL(5,2) NOT NULL
+    preco DECIMAL(7,2) NOT NULL
 );
 
 CREATE TABLE reservas (
